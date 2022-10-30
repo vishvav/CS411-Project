@@ -1,0 +1,8 @@
+User Story 3
+As a user, I want to be notified when a price drops below a chosen threshold, including shipping, so that I can know when to purchase my selected items.
+
+Front: 
+-The user will be able to mark certain products for notifications only when it drops below their threshold, and they will be able to input the price they want it to be below, and shipping will be taken into consideration too
+
+Back:
+-Continually check the price of the item, and if it drops below threshold send a notification to the user.

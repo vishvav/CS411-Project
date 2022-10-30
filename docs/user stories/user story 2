@@ -1,0 +1,17 @@
+User Story 2
+
+As a user, I want to customize the products I want to track, so the most relevant information to me is in one place.
+
+Front:
+-The user will be able to edit their product lists, having the option to delete or add items to the list 
+
+-The user will be able to rank which products are most relevant to them
+
+-The user will receive a notification if one of their products is out of stock
+
+Back:
+-Verify which items have been chosen to be deleted or added and add them to the stored user data so that it will update for the user.
+
+-Sort the list of products so that the products correspond to the user ranking 
+
+-Verify the stock of each product and if it goes out of stock, notify the user via their chosen method of communication.

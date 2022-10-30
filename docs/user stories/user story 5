@@ -1,0 +1,12 @@
+User Story 5
+
+As a user, I want to be able to see product information readily available so I make a more informed decision on what I am purchasing. 
+
+Front:
+
+-A product description from one of the retailers will be displayed to the user, as well as the average star rating from Amazon
+
+Back:
+-Get product descriptions from any of the API’s and return it to the user
+
+-Grab rating from Amazon API and return it to the user
