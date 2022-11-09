@@ -1,3 +1,4 @@
+# this file contains the models for the database
 from website import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
