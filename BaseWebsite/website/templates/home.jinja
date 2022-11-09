@@ -4,5 +4,15 @@
 {% block title %}Home{% endblock %} 
 
 {% block content %}
-<h1 align="center">This is the homepage</h1>
+<h1 align="center">
+Astronomy Picture of the Day 
+</h1>
+
+<body>
+   <ul>
+    <li>{{data.copyright}}</li>
+    <img src= {{data.hdurl}} style="height: 500px;" class="img-fluid" alt="Responsive image"/> 
+    <li>{{data.explanation}}</li>  
+   </ul>
+</body>
 {% endblock %}
