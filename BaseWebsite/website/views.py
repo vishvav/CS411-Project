@@ -16,11 +16,19 @@ def home():
     # stores APi key and Api URL
     nasakey = "l1YsgpdqqiBEXpx1IqHfEp1DkqgysDrBvzjIeKVR"
     url = 'https://api.nasa.gov/planetary/apod?'
-
-    params={
-        'api_key': nasakey,
-        'hd': 'True',
-        'date': datetime.today().strftime('%Y-%m-%d')
+    
+    if request.method == 'POST':
+        date_changed = request.form.get('date')    # type: ignore
+        params={
+            'api_key': nasakey,
+            'hd': 'True',
+            'date': date_changed
+         } 
+    else:
+        params={
+            'api_key': nasakey,
+            'hd': 'True',
+            'date': datetime.today().strftime('%Y-%m-%d')
     }
 
     response = requests.get(url, params=params)

@@ -1,3 +1,6 @@
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
+
 # this file creats the app and runs it
 from website import create_app
 
