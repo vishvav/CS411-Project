@@ -18,7 +18,10 @@ def home():
     url = 'https://api.nasa.gov/planetary/apod?'
     
     if request.method == 'POST':
-        date_changed = request.form.get('date')    # type: ignore
+        date_changed = request.form.get('dateInput')    # type: ignore
+        # if there is user input, get the date and enter into parameters
+        if date_changed:
+            date_changed = datetime.strptime(date_changed, '%m/%d/%Y').date()
         params={
             'api_key': nasakey,
             'hd': 'True',
