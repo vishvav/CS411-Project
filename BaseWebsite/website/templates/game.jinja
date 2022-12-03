@@ -1,7 +1,7 @@
-<!-- this file contains the code for the "home" page (this is where picture diplay should be -->
+<!-- this file contains the code for the "game" page -->
 
 {% extends "base.jinja" %} 
-{% block title %}Home{% endblock %} 
+{% block title %}Game{% endblock %} 
 
 {% block content %}
 <!--  	
@@ -34,32 +34,37 @@ npm install lessc
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 
-<h1 align="center"> Astronomy Picture of the Day </h1>
+<h1 align="center"> Test Your AI Image Generating Skills! </h1>
 
   <body style="background-color: ivory;">
 
     <div class="input-group date" data-provide="datepicker" data-date-end-date="0d" data-date-start-date="01/01/2000">
         
-        <form method="post" action = "/">
+        <form method="post" action = "/game">
           <label for= "date"> </label>
           <b>Change Image </b> 
-          <input type="text" name="dateInput" class="form-control" placeholder="Select Date">
+          <input type="text" name="dateInputter" class="form-control" placeholder="Select Date">
           <input type="submit" value="Submit">
         </form>
-        
         <!-- might not work -->
         <div class="input-group-addon">
             <span class="glyphicon glyphicon-th"></span>
         </div>
     </div>
-  
     <!-- image display -->
     <br>
     <img src= {{data.hdurl}} style="height: 500px;" class="img-fluid" alt="Responsive image"/> 
     <br>
-    <b>Photographer </b> 
-    <p>{{data.copyright}}</p>
-    <b>Description </b> 
-    <p>{{data.explanation}}.</p>  
+    <form method="post" action = "/game">
+    <label for="Name">Describe the above image as best as you can.</label>
+    <br> </br>
+    <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
+    <input type="submit" value="Submit">
+    </form>
+    <br>
+    </br>
+    
   </body>
+
 {% endblock %}
+  
