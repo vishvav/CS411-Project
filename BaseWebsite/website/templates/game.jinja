@@ -34,37 +34,51 @@ npm install lessc
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 
-<h1 align="center"> Test Your AI Image Generating Skills! </h1>
+<h1 align="center" > Test Your AI Image Generating Skills! </h1>
 
   <body style="background-color: ivory;">
-
+  <br>
+    
     <div class="input-group date" data-provide="datepicker" data-date-end-date="0d" data-date-start-date="01/01/2000">
-        
-        <form method="post" action = "/game">
-          <label for= "date"> </label>
-          <b>Change Image </b> 
-          <input type="text" name="dateInputter" class="form-control" placeholder="Select Date">
-          <input type="submit" value="Submit">
+        <form method="post" action = "/">
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <input type="text" name="dateInput" class="form-control" placeholder="Select Date">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
         </form>
+
         <!-- might not work -->
         <div class="input-group-addon">
             <span class="glyphicon glyphicon-th"></span>
         </div>
     </div>
+
+
     <!-- image display -->
     <br>
-    <img src= {{data.hdurl}} style="height: 500px;" class="img-fluid" alt="Responsive image"/> 
-    <br>
+    <div class="text-center">
+      <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/> 
+    </div>
     <form method="post" action = "/game">
-    <br>
-    <label for="Name">Describe the above image as best as you can.</label>
-    <br> </br>
-    <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
-    <input type="submit" value="Generate">
+      <center>
+        <label for="Name">Describe the above image as best as you can.</label>
+      </center>
+      <br>
+      <div class="form-row align-items-center">
+        <div class="col-md-10 my-1">
+          <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
     </form>
-    <br>
-    </br>
-    
+    <br>   
+
   </body>
 
 {% endblock %}

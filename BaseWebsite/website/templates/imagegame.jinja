@@ -39,29 +39,33 @@ npm install lessc
   <body style="background-color: ivory;">
 
     <div class="input-group date" data-provide="datepicker" data-date-end-date="0d" data-date-start-date="01/01/2000">
-        
+      <div class="text-center">
         <form method="post" action = "/game">
           <label for= "date"> </label>
           <b>Change Image </b> 
           <input type="text" name="dateInputter" class="form-control" placeholder="Select Date">
           <input type="submit" value="Submit">
         </form>
+      </div>  
     </div>
     <!-- image display -->
-    <br>
-    <img src= {{data.hdurl}} style="height: 500px;" class="img-fluid" alt="Responsive image"/> 
-    <br>
+    <div class="text-center">
+      <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/> 
+    </div>
     <form method="post" action = "/game">
-    <label for="Name">Describe the above image as best as you can.</label>
-    <br> </br>
-    <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
-    <input type="submit" value="Submit">
+      <label for="Name">Describe the above image as best as you can.</label>
+      <br> </br>
+      <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
+      <input type="submit" value="Submit">
     </form>
     <br>
     </br>
-    <img src= {{data2['data'][0]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/> 
-    <img src= {{data2['data'][1]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
-    <img src= {{data2['data'][2]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+    <div class="text-center">    
+      <img src= {{data2['data'][0]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/> 
+      <img src= {{data2['data'][1]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+      <img src= {{data2['data'][2]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+    </div>
+
 
   </body>
 

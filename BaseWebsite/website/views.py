@@ -70,10 +70,10 @@ def game():
     # data has copyright, date, explaination, hdurl, media_type, service_version, title, url
     data = response.json()
     url_ai = 'https://api.openai.com/v1/images/generations'
-    user_prompt = request.form.get('UserDescription')
+    user_prompt = request.form.get('UserDescription')  # type: ignore
     if request.method == 'POST':
         if user_prompt:
-            OPENAI_API_KEY = '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'
+            OPENAI_API_KEY = 'ENTER KEY HERE'
 
             headers = {
                 'Content-Type': 'application/json',

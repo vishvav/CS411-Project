@@ -35,18 +35,19 @@ npm install lessc
 </head>
 
 <h1 align="center"> Astronomy Picture of the Day </h1>
-
+<br>
   <body style="background-color: ivory;">
-
     <div class="input-group date" data-provide="datepicker" data-date-end-date="0d" data-date-start-date="01/01/2000">
-        
         <form method="post" action = "/">
-          <label for= "date"> </label>
-          <b>Change Image </b> 
-          <input type="text" name="dateInput" class="form-control" placeholder="Select Date">
-          <input type="submit" value="Submit">
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <input type="text" name="dateInput" class="form-control" placeholder="Select Date">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
         </form>
-        
         <!-- might not work -->
         <div class="input-group-addon">
             <span class="glyphicon glyphicon-th"></span>
@@ -55,11 +56,13 @@ npm install lessc
   
     <!-- image display -->
     <br>
-    <img src= {{data.hdurl}} style="height: 500px;" class="img-fluid" alt="Responsive image"/> 
+    <div class="text-center">
+      <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/> 
+    </div>
     <br>
     <b>Photographer </b> 
     <p>{{data.copyright}}</p>
     <b>Description </b> 
-    <p>{{data.explanation}}.</p>  
+    <p>{{data.explanation}}</p>  
   </body>
 {% endblock %}
