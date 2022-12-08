@@ -72,7 +72,7 @@ def game():
     user_prompt = request.form.get('UserDescription')  # type: ignore
     if request.method == 'POST':
         if user_prompt:
-            OPENAI_API_KEY = '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'
+            OPENAI_API_KEY = ''
 
             headers = {
                 'Content-Type': 'application/json',
