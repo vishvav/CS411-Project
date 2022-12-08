@@ -5,11 +5,10 @@ from flask_login import login_required, current_user
 # import os
 from datetime import datetime
 # import urllib.request
-#from gtts import gTTS
+# from gtts import gTTS
 import requests, json
 import os
 import openai
-
 
 views = Blueprint('views', __name__)
 
@@ -73,7 +72,7 @@ def game():
     user_prompt = request.form.get('UserDescription')  # type: ignore
     if request.method == 'POST':
         if user_prompt:
-            OPENAI_API_KEY = 'ENTER KEY HERE'
+            OPENAI_API_KEY = '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'
 
             headers = {
                 'Content-Type': 'application/json',

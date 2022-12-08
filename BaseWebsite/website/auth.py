@@ -11,7 +11,6 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')  # type: ignore
         password = request.form.get('password')  # type: ignore
-
         user = User.query.filter_by(email=email).first()
         if user:
             if check_password_hash(user.password, password):
