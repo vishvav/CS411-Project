@@ -9,7 +9,7 @@ from datetime import datetime
 import requests, json
 import os
 import openai
-
+import copy
 views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
@@ -87,6 +87,5 @@ def game():
             response2 = requests.post('https://api.openai.com/v1/images/generations', headers=headers, json=json_data)
             data2 = response2.json()
             print(data2)
-            return render_template("imagegame.jinja", user=current_user, data=data, data2=data2)
+            return render_template("game.jinja", user=current_user, data=data, data2=data2)
     return render_template("game.jinja", user=current_user, data=data)
-

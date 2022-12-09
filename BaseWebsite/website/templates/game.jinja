@@ -60,7 +60,11 @@ npm install lessc
     <!-- image display -->
     <br>
     <div class="text-center">
-      <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/> 
+      {% if data_change %}
+        <img src= {{data_change.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/>
+      {% else %}
+        <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/>
+      {% endif %} 
     </div>
     <form method="post" action = "/game">
       <center>
@@ -72,12 +76,16 @@ npm install lessc
           <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
         </div>
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Submit</button>       
         </div>
       </div>
     </form>
-    <br>   
-
+    <br> 
+    {%if data2%} 
+      <img src= {{data2['data'][0]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/> 
+      <img src= {{data2['data'][1]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+      <img src= {{data2['data'][2]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+    {% endif %}  
   </body>
 
 {% endblock %}
