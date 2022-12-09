@@ -45,7 +45,10 @@ npm install lessc
           <label for= "date"> </label>
           <b>Change Image </b> 
           <input type="text" name="dateInputter" class="form-control" placeholder="Select Date">
-          <input type="submit" value="Submit">
+          <div class="col-auto">
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
         </form>
       </div>  
     </div>
@@ -62,20 +65,30 @@ npm install lessc
     <div class="text-center">
       <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/> 
     </div>
+    <center>
     <form method="post" action = "/game">
       <center>
-        <label for="Name">Describe the above image as best as you can.</label>
+        <br>
+        <label for="Name"><b>Describe the above image as best as you can.</b></label>
       </center>
       <br>
-      <div class="form-row align-items-center">
+      
         <div class="col-md-10 my-1">
-          <input type="text" name="UserDescription" class= "form-control" placeholder="Describe Image">
+        {# center the form below #}
+        
+         
+          <input type="text" name="UserDescription" class= "form-control" placeholder="Describe the Image">
+          
+        
         </div>
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Generate</button>
+          
         </div>
       </div>
+      
     </form>
+    </center>
     <br>   
 
   </body>
