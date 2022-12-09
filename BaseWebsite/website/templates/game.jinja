@@ -67,7 +67,7 @@ npm install lessc
         <img src= {{data_change.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/>
       {% else %}
         <img src= {{data.hdurl}} class="rounded" style="height: 500px;" alt="Responsive image"/>
-      {% endif %} 
+      {% endif %}
     </div>
     <center>
     <form method="post" action = "/game">
@@ -92,6 +92,11 @@ npm install lessc
       
     </form>
     <br>   
+    {%if data2%} 
+      <img src= {{data2['data'][0]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/> 
+      <img src= {{data2['data'][1]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+      <img src= {{data2['data'][2]['url']}} style="height: 400px; width: 400px" class="img-fluid" alt="..."/>
+    {% endif %}  
 
   </body>
 
