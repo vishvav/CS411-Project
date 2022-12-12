@@ -1,12 +1,12 @@
 User Story 1:
-As a user, I want to be able to create an account to access the application so that I can change my preferences and make sure that my experience with the application is tailored to me.
+As a user, I want to be able to create an account to access the application.
 
 Front:
 -There will be an option to create an account
 
--In the settings there will be all the preference options listed and the user will be able to toggle whichever ones on or off and save their changes.
+-There will be fields that have the user enter their email, password to create an account
 
 Back:
--Be able to register users and store all data relevant to one user so that their preferences will be fulfilled upon login
+-Use the database to store user information so that the user will be able to login and log back out.
 
--Verify which preferences are turned on and off so that the application will change to the users preferences.
+-Write code that makes sure the password is longer than a certain length for security purposes

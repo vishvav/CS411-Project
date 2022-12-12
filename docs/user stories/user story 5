@@ -1,12 +1,14 @@
 User Story 5
 
-As a user, I want to be able to see product information readily available so I make a more informed decision on what I am purchasing. 
+As a user I want this application to be secure and private, so that this webpage can only be accessed by people with an account.
 
 Front:
 
--A product description from one of the retailers will be displayed to the user, as well as the average star rating from Amazon
+-The user is required to make an account before even being able to see the home page
+
+-Once the user logs out they are not able to access the webpage
 
 Back:
--Get product descriptions from any of the API’s and return it to the user
+-The home and game page are login_required, and as the name implies, the user will be denied access unless they are logged in
 
--Grab rating from Amazon API and return it to the user
+-In the _init_.py file the security measures for login and establishing the database are set.

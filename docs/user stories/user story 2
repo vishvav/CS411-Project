@@ -1,17 +1,15 @@
 User Story 2
 
-As a user, I want to customize the products I want to track, so the most relevant information to me is in one place.
+As a user, I want to be able to see the picture of the day and previous dates.
 
 Front:
--The user will be able to edit their product lists, having the option to delete or add items to the list 
+-There will be a datepicker form in which the user can enter any day after June 16, 1995 (when the NASA APOD started)
 
--The user will be able to rank which products are most relevant to them
+-The picture of the day will be displayed by default, and once the user submits the date they chose, the picture will update to the corresponding day
 
--The user will receive a notification if one of their products is out of stock
 
 Back:
--Verify which items have been chosen to be deleted or added and add them to the stored user data so that it will update for the user.
+-The value in the datepicker form will be read to see if it Null or not, and if it not a new json file containing data from the Nasa APOD API will be generated.
 
--Sort the list of products so that the products correspond to the user ranking 
+-The new json file's data will be rendered with the template for the corresponding page, so the picture will change when the page is rendered following the datepicker submission
 
--Verify the stock of each product and if it goes out of stock, notify the user via their chosen method of communication.

@@ -1,8 +1,16 @@
 User Story 3
-As a user, I want to be notified when a price drops below a chosen threshold, including shipping, so that I can know when to purchase my selected items.
+As a user I want to be able to generate images based on my own text prompt.
 
 Front: 
--The user will be able to mark certain products for notifications only when it drops below their threshold, and they will be able to input the price they want it to be below, and shipping will be taken into consideration too
+-The user will be able to navigate from the home page to the game page.
+
+-There will be a text field available for the user to enter a prompt. 
+
+-When they are done they can submit the prompt and this prompt will be sent to the OpenAI API, so that 3 images can be generated based on their prompt
+
+-These images will be displayed on the page
 
 Back:
--Continually check the price of the item, and if it drops below threshold send a notification to the user.
+-The user input from the form will be retrieved and entered into the OpenAi API, along with all the other required parameters to generate the 3 images, and store this data in a json file as well.
+
+-This will be done in a new function that routes to /game, instead of a home page

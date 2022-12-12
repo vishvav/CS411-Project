@@ -1,13 +1,13 @@
 User Story 4
-As a user, I want to be able to compare the same products from different retailers, so that I can buy the cheapest one, with them displayed from cheapest to most expensive.
+As a user, I want to be able to compare the images I have generated to the original image I based my prompt off of.
 
 Front:
--The prices of the product from different retailers will be displayed with the lowest price highlighted in some manner
+-Have the same datepicker and image display on the /game route for the user to be able to change the picture 
 
--The prices will be ranked from cheapest to most expensive 
+-The user will be able to enter their prompt in a textbox below the image display
 
 Back:
--Get price information from retailers’ API  and compare to give the cheapest price to the user.
+-Save information so that the image does not default back to the image of the day, but instead to the date that the user selected
 
--Compare prices and then sort the prices so that they will be displayed from cheapest to most expensive
+-Give the data from the json files to the jinja templates so that the information from the NASA and OpenAI APIs will be reflected on the actual page.
 
